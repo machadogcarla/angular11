@@ -22,6 +22,12 @@ import { SubNgIfComponent } from './ng-if/sub-ng-if/sub-ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
+import { NgContainerComponent } from './ng-container/ng-container.component';
+import { CommonModule } from "@angular/common";
+import { NgContentComponent } from './ng-content/ng-content.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,11 @@ import {MatListModule} from '@angular/material/list';
     NgClassComponent,
     NgIfComponent,
     SubNgIfComponent,
-    NgForComponent
+    NgForComponent,
+    NgSwitchComponent,
+    NgTemplateComponent,
+    NgContainerComponent,
+    NgContentComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +59,9 @@ import {MatListModule} from '@angular/material/list';
     FormsModule,
     MatRadioModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatProgressBarModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
