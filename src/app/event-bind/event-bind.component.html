@@ -1,0 +1,43 @@
+<p>event-bind works!</p>
+
+<section>
+    <button mat-button color="primary" (click)='save()'>Save</button> <!--() evento que será executado-->
+    <button mat-button color="warn" (click)='inc()'>{{buttonName}}</button>
+</section>
+
+<section>
+    <button mat-button color="primary" [disabled]="!btnEnable">My button 1</button>
+    <button mat-button color="warn" [disabled]="!btnEnable">My button 2</button>
+
+    <button mat-button color="warn" [disabled]="!btnEnable" (click)="disabled()" >Disabled</button>
+    <mat-card>
+        <mat-card-content>      
+          <mat-progress-spinner
+              class="example-margin"
+              color="primary"
+              [mode]="mode"
+              value="50">
+          </mat-progress-spinner>
+        </mat-card-content>
+      </mat-card>
+</section>
+
+<section>
+  <p><mat-checkbox color="warn" (change)="cbChange($event.checked)">Disable / Enable</mat-checkbox></p>
+</section>
+<input (keyup)="onKey($event)">
+  <p>{{values}}</p>
+
+  <br>
+  <p>
+    <mat-form-field>
+      <mat-select matNativeControl required [disabled]="selectDisabled" (selectionChange)="selectionChange($event)">
+        <mat-option value="1">Volvo</mat-option>
+        <mat-option value="2">Saab</mat-option>
+        <mat-option value="3">Mercedes</mat-option>
+        <mat-option value="4">Audi</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+  </p>
+  <p>Escolha: {{selectedOption}}</p>
